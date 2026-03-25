@@ -6,97 +6,152 @@
 <title>Happy Birthday Ankita ❤️</title>
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<div class="hearts"></div>
+<div class="ambient">
+  <div class="glow glow-one"></div>
+  <div class="glow glow-two"></div>
+  <div class="hearts" aria-hidden="true"></div>
+  <div class="sparkles" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
 
 <audio id="music" loop preload="auto">
-<source src="music.mp3" type="audio/mp3">
+  <source src="music.mp3" type="audio/mp3">
 </audio>
 
-<!-- Welcome Page -->
-<section class="page welcome active">
-<img src="images/kid.jpg" class="kid">
-<h1 class="typing">Hi Ankita ❤️</h1>
-<p>Someone special made this for you...</p>
-<button onclick="start()">Enter</button>
-</section>
+<main class="story-shell">
+  <button class="nav-arrow nav-arrow-left" type="button" aria-label="Previous page" onclick="previousPage()">
+    &#10094;
+  </button>
 
-<!-- Message Page -->
-<section class="page message">
-<div class="text">
-Happy birthday my love 😚<br><br>
-Almost 15 months ago we confessed to each other about the love that we feel for each other and I am grateful for that day everyday.<br><br>
-I love you more than anything ever and I promise to keep loving u a little more everyday so that when we grow old I love more than the world ♥️
-</div>
-<button onclick="next()">Continue</button>
-</section>
+  <div class="page-stack">
+    <section class="page welcome active">
+      <div class="card hero-card">
+        <div class="hero-photo polaroid featured-polaroid">
+          <img src="images/kid.jpg" class="kid" alt="Ankita smiling">
+          <span>This boy has the best gf in the world</span>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">A little surprise made with love</p>
+          <h1>Hi Ankita ❤️</h1>
+          <p class="intro-text">
+            I wanted your birthday page to feel softer, sweeter, and full of tiny happy moments.
+          </p>
+          <div class="hero-actions">
+            <button type="button" onclick="start()">Enter the Surprise</button>
+            <p class="swipe-hint">Tap the arrows or swipe to move through our story.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- Photo Pages -->
-<section class="page collage">
-<div class="grid">
-<img src="images/1.jpg">
-<img src="images/2.jpg">
-<img src="images/3.jpg">
-<img src="images/4.jpg">
-</div>
-</section>
+    <section class="page message">
+      <div class="card message-card">
+        <p class="eyebrow">For you, always</p>
+        <div class="text">
+          Happy birthday my love 😘<br><br>
+          Almost 15 months ago we confessed the love we feel for each other, and I still feel grateful for that day every single day.<br><br>
+          I love you more than anything, and I promise to keep loving you a little more every day so that when we grow old, my heart is still choosing you first. ❤️
+        </div>
+      </div>
+    </section>
 
-<section class="page collage">
-<div class="grid">
-<img src="images/5.jpg">
-<img src="images/6.jpg">
-<img src="images/7.jpg">
-<img src="images/8.jpg">
-</div>
-</section>
+    <section class="page collage">
+      <div class="card collage-card">
+        <p class="eyebrow">Little snapshots</p>
+        <div class="grid">
+          <figure class="polaroid"><img src="images/1.jpg" alt="Memory 1"><figcaption>Our smile</figcaption></figure>
+          <figure class="polaroid"><img src="images/2.jpg" alt="Memory 2"><figcaption>Soft moment</figcaption></figure>
+          <figure class="polaroid"><img src="images/3.jpg" alt="Memory 3"><figcaption>Favorite us</figcaption></figure>
+          <figure class="polaroid"><img src="images/4.jpg" alt="Memory 4"><figcaption>Pretty day</figcaption></figure>
+        </div>
+      </div>
+    </section>
 
-<section class="page collage">
-<div class="grid">
-<img src="images/9.jpg">
-<img src="images/10.jpg">
-<img src="images/11.jpg">
-<img src="images/12.jpg">
-</div>
-</section>
+    <section class="page collage">
+      <div class="card collage-card">
+        <p class="eyebrow">More reasons to smile</p>
+        <div class="grid">
+          <figure class="polaroid"><img src="images/5.jpg" alt="Memory 5"><figcaption>Sweet look</figcaption></figure>
+          <figure class="polaroid"><img src="images/6.jpg" alt="Memory 6"><figcaption>Best energy</figcaption></figure>
+          <figure class="polaroid"><img src="images/7.jpg" alt="Memory 7"><figcaption>My favorite</figcaption></figure>
+          <figure class="polaroid"><img src="images/8.jpg" alt="Memory 8"><figcaption>Cutie alert</figcaption></figure>
+        </div>
+      </div>
+    </section>
 
-<section class="page collage">
-<div class="grid">
-<img src="images/13.jpg">
-<img src="images/14.jpg">
-<img src="images/15.jpg">
-<img src="images/16.jpg">
-</div>
-</section>
+    <section class="page collage">
+      <div class="card collage-card">
+        <p class="eyebrow">Us in frames</p>
+        <div class="grid">
+          <figure class="polaroid"><img src="images/9.jpg" alt="Memory 9"><figcaption>Warm day</figcaption></figure>
+          <figure class="polaroid"><img src="images/10.jpg" alt="Memory 10"><figcaption>Stolen glance</figcaption></figure>
+          <figure class="polaroid"><img src="images/11.jpg" alt="Memory 11"><figcaption>Pure joy</figcaption></figure>
+          <figure class="polaroid"><img src="images/12.jpg" alt="Memory 12"><figcaption>My home</figcaption></figure>
+        </div>
+      </div>
+    </section>
 
-<section class="page collage">
-<div class="grid">
-<img src="images/17.jpg">
-<img src="images/18.jpg">
-<img src="images/19.jpg">
-<img src="images/20.jpg">
-</div>
-</section>
+    <section class="page collage">
+      <div class="card collage-card">
+        <p class="eyebrow">A whole gallery of love</p>
+        <div class="grid">
+          <figure class="polaroid"><img src="images/13.jpg" alt="Memory 13"><figcaption>Soft hearts</figcaption></figure>
+          <figure class="polaroid"><img src="images/14.jpg" alt="Memory 14"><figcaption>Lucky me</figcaption></figure>
+          <figure class="polaroid"><img src="images/15.jpg" alt="Memory 15"><figcaption>Always you</figcaption></figure>
+          <figure class="polaroid"><img src="images/16.jpg" alt="Memory 16"><figcaption>Sweetest face</figcaption></figure>
+        </div>
+      </div>
+    </section>
 
-<section class="page collage">
-<div class="grid">
-<img src="images/21.jpg">
-<img src="images/22.jpg">
-<img src="images/23.jpg">
-<img src="images/24.jpg">
-</div>
-</section>
+    <section class="page collage">
+      <div class="card collage-card">
+        <p class="eyebrow">Moments I keep replaying</p>
+        <div class="grid">
+          <figure class="polaroid"><img src="images/17.jpg" alt="Memory 17"><figcaption>Gentle eyes</figcaption></figure>
+          <figure class="polaroid"><img src="images/18.jpg" alt="Memory 18"><figcaption>Happy us</figcaption></figure>
+          <figure class="polaroid"><img src="images/19.jpg" alt="Memory 19"><figcaption>Heart full</figcaption></figure>
+          <figure class="polaroid"><img src="images/20.jpg" alt="Memory 20"><figcaption>Endless love</figcaption></figure>
+        </div>
+      </div>
+    </section>
 
-<!-- Ending -->
-<section class="page ending">
-<h1>I'm All Yours Forever ❤️</h1>
-<p>Happy Birthday Ankita</p>
-<p>— Om</p>
-<button onclick="restart()">Replay</button>
-</section>
+    <section class="page collage">
+      <div class="card collage-card">
+        <p class="eyebrow">Saved forever</p>
+        <div class="grid">
+          <figure class="polaroid"><img src="images/21.jpg" alt="Memory 21"><figcaption>Sweet chapter</figcaption></figure>
+          <figure class="polaroid"><img src="images/22.jpg" alt="Memory 22"><figcaption>Pure sparkle</figcaption></figure>
+          <figure class="polaroid"><img src="images/23.jpg" alt="Memory 23"><figcaption>My person</figcaption></figure>
+          <figure class="polaroid"><img src="images/24.jpg" alt="Memory 24"><figcaption>Forever mood</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="page ending">
+      <div class="card ending-card">
+        <p class="eyebrow">The easiest promise</p>
+        <h1>I'm All Yours Forever ❤️</h1>
+        <p>Happy Birthday Ankita</p>
+        <p class="signature">From Bebu</p>
+        <button type="button" onclick="restart()">Replay</button>
+      </div>
+    </section>
+  </div>
+
+  <button class="nav-arrow nav-arrow-right" type="button" aria-label="Next page" onclick="nextPage()">
+    &#10095;
+  </button>
+</main>
+
+<div class="progress-dots" aria-label="Page progress"></div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
