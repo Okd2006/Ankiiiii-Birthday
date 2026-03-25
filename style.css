@@ -121,17 +121,22 @@ button:hover {
   grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
   gap: 18px;
-  padding: 24px clamp(14px, 3vw, 36px);
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 18px clamp(14px, 3vw, 32px) 28px;
 }
 
 .page-stack {
   position: relative;
   width: 100%;
   max-width: 1100px;
-  height: min(88vh, 840px);
-  height: min(88dvh, 840px);
+  height: min(82vh, 760px);
+  height: min(82dvh, 760px);
   margin: 0 auto;
   touch-action: pan-y pinch-zoom;
+  overflow: hidden;
+  border-radius: 38px;
 }
 
 .page {
@@ -173,12 +178,14 @@ button:hover {
 
 .card {
   width: min(100%, 950px);
+  max-height: 100%;
   background: var(--card);
   border: 1px solid var(--card-border);
   box-shadow: var(--shadow);
   backdrop-filter: blur(14px);
   border-radius: 34px;
   padding: clamp(22px, 3vw, 38px);
+  overflow: auto;
 }
 
 .collage-card {
@@ -400,16 +407,20 @@ button:hover {
 
 @media (min-width: 901px) {
   .page-stack {
-    max-width: 1180px;
+    max-width: 1140px;
   }
 
   .collage-card {
-    padding: 28px 30px 30px;
+    padding: 24px 26px 26px;
   }
 
   .grid {
-    grid-template-columns: repeat(2, minmax(240px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .polaroid img {
+    aspect-ratio: 1 / 0.92;
   }
 }
 

@@ -7,7 +7,6 @@ const dotsContainer = document.querySelector(".progress-dots");
 let current = 0;
 let hasStarted = false;
 let isAnimating = false;
-let autoAdvanceTimer;
 let touchStartX = 0;
 
 function buildDots() {
@@ -63,21 +62,10 @@ function goToPage(index) {
   }, 650);
 }
 
-function startAuto() {
-  window.clearInterval(autoAdvanceTimer);
-  autoAdvanceTimer = window.setInterval(() => {
-    const isGalleryPage = current >= 2 && current < pages.length - 1;
-    if (isGalleryPage) {
-      goToPage(current + 1);
-    }
-  }, 5000);
-}
-
 function start() {
   hasStarted = true;
   music.play().catch(() => {});
   goToPage(1);
-  startAuto();
 }
 
 function nextPage() {
@@ -98,7 +86,6 @@ function previousPage() {
 }
 
 function restart() {
-  window.clearInterval(autoAdvanceTimer);
   window.location.reload();
 }
 
